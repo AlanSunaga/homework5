@@ -25,8 +25,11 @@ public class Main {
         //Выведите в консоль все четные числа от 0 до 17.
 
         System.out.println("Задача 3");
-        for (int i = 2; i < 17; i+=2) {
-            System.out.println(i);
+        for (int i = 0; i < 17; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+
         }
         System.out.println();
 
@@ -44,11 +47,9 @@ public class Main {
         // В консоль результат должен выводиться в формате: «… год является високосным».
 
         System.out.println("Задача 5");
-        for (int i = 1904; i <= 2096; i+=4) {
+        for (int i = 1904; i <= 2096; i++) {
             if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
                 System.out.println(i + " год является високосным.");
-            } else {
-                System.out.println(i + " год не является високосным.");
             }
         }
         System.out.println();
@@ -59,7 +60,7 @@ public class Main {
         //7 14 21 28 35 42 49 56 63 70 77 84 91 98
 
         System.out.println("Задача 6");
-        for (int i = 7; i <= 98; i+=7) {
+        for (int i = 7; i <= 98; i += 7) {
             System.out.println(i);
         }
         System.out.println();
@@ -70,7 +71,7 @@ public class Main {
         //1 2 4 8 16 32 64 128 256 512
 
         System.out.println("Задача 7");
-        for (int i = 1; i <= 512; i*=2) {
+        for (int i = 1; i <= 512; i *= 2) {
             System.out.println(i);
         }
         System.out.println();
@@ -83,8 +84,8 @@ public class Main {
         System.out.println("Задача 8");
         int total = 0;
         for (int i = 1; i <= 12; i++) {
-            total +=29000;
-            System.out.println("Месяц "+ i +", сумма накоплений равна "+ total +" рублей");
+            total += 29000;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + total + " рублей");
         }
         System.out.println();
 
@@ -94,11 +95,11 @@ public class Main {
 
         System.out.println("Задача 9");
         int salary = 29000;
-        total = 0;
-        for (int i = 1; i < 12; i++) {
-            total = total + total/100;
-            total +=salary;
-            System.out.println("Месяц "+ i +", сумма накоплений равна "+ total +" рублей");
+        double totalM = 0;
+        for (int i = 1; i <= 12; i++) {
+            totalM += salary;
+            totalM *= 1.01;
+            System.out.println("Месяц " + i + ", сумма накоплений равна " + (int) totalM + " рублей");
         }
         System.out.println();
 
@@ -130,7 +131,7 @@ public class Main {
         int result;
         for (int i = 1; i <= 10; i++) {
             result = num * i;
-            System.out.println(num +"*"+ i +"="+ result);
+            System.out.println(num + "*" + i + "=" + result);
         }
     }
 }
