@@ -96,9 +96,11 @@ public class Main {
         System.out.println("Задача 9");
         int salary = 29000;
         double totalM = 0;
+        double percent = 12;
+        double annual = (percent / 100) / 12;
         for (int i = 1; i <= 12; i++) {
             totalM += salary;
-            totalM *= 1.01;
+            totalM *= 1 + annual;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + (int) totalM + " рублей");
         }
         System.out.println();
